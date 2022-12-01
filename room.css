@@ -1,0 +1,293 @@
+*,
+* ::after,
+* ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    /* width: 100%; */
+    height: 65vh;
+    position: relative;
+}
+
+.left-side{
+    flex-basis: 60%;
+    /* background-image: url('./images/desktop-image-hero-1.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; */
+    height: 65vh;
+    /* width: 100%; */
+    /* position: relative; */
+    
+}
+
+.left-side img{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+
+nav{
+    display: flex;
+    padding: 3rem;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: 0;
+}
+
+nav h1{
+    font-weight: 500;
+}
+
+nav ul{
+    margin-left: 30px;
+    display: inline-flex;
+}
+
+nav ul li{
+    list-style-type: none;
+    padding-left: 25px;
+    font-weight: 500;
+}
+
+nav ul li:hover::after{
+    content: '';
+    width: 40%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    margin: 2px auto;
+}
+
+.right-side{
+    flex-basis: 40%;
+    position: relative;
+}
+
+.right-side-content{
+    position: absolute;
+    top: 20%;
+    transform: translate(-50, -50);
+    padding: 0 80px;
+}
+
+.right-side-content h1{
+    font-weight: 700;
+    padding-right: 50px;
+    margin-bottom: 5%;
+}
+
+.right-side-content p{
+    font-size: 12px;
+    padding-right: 50px;
+    font-weight: 700;
+    margin-bottom: 5%;
+    line-height: 1.5;
+    color: hsl(0, 0%, 63%);
+}
+
+.right-side-content .shop a{
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    font-size: 12px;
+    color: #000;
+}
+
+.right-side-content .shop .fa{
+    padding: 0 20px;
+    color: rgb(65, 63, 63);
+}
+
+.container .slide-btns{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 60%;
+}
+
+.container .slide-btns span button{
+    padding: 1.2rem 1.72rem;
+    border: none;
+    background-color: #000;
+    color: #626262;
+}
+
+.container .slide-btns span button .fa{
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+
+.container2{
+    display: flex;
+}
+
+.container2 .img1{
+    width: 30%;
+}
+
+.container2 .img2{
+    width: 30%;
+}
+
+.container2 .center{
+    padding: 50px;
+}
+
+.container2 .center h4{
+    text-transform: uppercase;
+    margin-bottom: 3%;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+.container2 .center h5{
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 14px;
+    color: hsl(0, 0%, 63%);
+}
+
+.attribution { 
+    margin-top: 20px;
+    font-size: 12px; 
+    text-align: center; 
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+     text-decoration: none;
+    }
+
+    @media (max-width: 500px) {
+        .container {
+            
+            width: 100%;
+            /* height: auto; */
+            /* display: inline-block; */
+            flex-direction: column;
+            
+           
+        }
+
+        .left-side img {
+            height: 100%;
+            width: 100%;
+            position: relative;
+        }
+
+        nav ul {
+            margin-left: 0;
+        }
+
+        nav ul li {
+            padding: 5px;
+            font-weight: 500;
+        }
+
+        .left-side {
+            flex-basis: 50%;
+            height: auto;
+            width: 100%;
+            position: relative;
+        }
+
+        .container .slide-btns {
+            bottom: 0;
+            left: 83%;
+        }
+
+        .container .slide-btns span button {
+            padding: 0.5rem 0.65rem;
+        }
+
+        nav {
+            padding: 0;
+        }
+
+        .right-side {
+            flex-basis: 50%;
+            /* position: relative; */
+            width: 100%;
+            /* margin-top: 10px; */
+            padding: 0 25px;
+        }
+
+        .right-side-content {
+            /* position: relative; */
+            transform: none;
+            padding: 0 20px;
+        }
+
+        .right-side-content h1 {
+            padding-right: 20px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        .right-side-content p {
+            margin-bottom: 20px;
+            padding-right: 20px;
+        }
+
+        .container2 {
+            flex-direction: column;
+            padding-top: 90px;
+        }
+
+        .container2 .center {
+            padding: 25px 35px;
+        }
+
+        .container2 .center h4 {
+            margin: 5% 0;
+        }
+
+        .container2 .center h5 {
+            
+            font-size: 12px;
+            
+        }
+
+        .container2 .img1 {
+            width: 100%;
+        }
+
+        .container2 .img2 {
+            width: 100%;
+            
+        }
+    }
+
+    @media (max-width: 375px) {
+        .container .slide-btns {
+            left: 82%;
+        }
+    }
+
+    @media (min-width: 400px) {
+        .container .slide-btns {
+            left: 84%;
+        }
+    }
+
+    @media (max-width: 325px) {
+        .container .slide-btns {
+            left: 79%;
+        }
+
+        .container2 .img1 {
+            margin-top: 45px;
+        }
+    }
